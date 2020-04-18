@@ -7,7 +7,7 @@ export default function Footer(){
 
     return(
         <div className='footer'>
-            <span className='footer__name'>DevCows </span><img src='./Img/devcows.png' width='25' height='25' /><br></br>
+            <img src='./Img/devcows.png' width='35' height='35' /><br></br><span className='footer__name'>DevCows </span><br></br>
             <Dev nombre='Ajitzi R. Quintana Ruiz'>
                 <a className='icon' href='https://www.facebook.com/ajitzi.quintana' target='_blank'> 
                     <FaFacebook />
