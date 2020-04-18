@@ -1,15 +1,52 @@
 import React from 'react';
 
+import { FaFacebook,FaGithub,FaUserGraduate,FaLinkedinIn } from "react-icons/fa";
 import './Footer.scss';
 
 export default function Footer(){
 
     return(
         <div className='footer'>
-            SOY EL FOOTER
-            <div className='footer__icons'>
-                soy un icono
-            </div>
+            <span className='footer__name'>DevCows </span><img src='./Img/devcows.png' width='25' height='25' /><br></br>
+            <Dev nombre='Ajitzi R. Quintana Ruiz'>
+                <a className='icon' href='https://www.facebook.com/ajitzi.quintana' target='_blank'> 
+                    <FaFacebook />
+                </a>
+                <a className='icon' href='https://github.com/Quintaneishon' target='_blank'> 
+                    <FaGithub />
+                </a>
+                <a className='icon' href='https://quintaneishon.github.io/personal-page/' target='_blank'> 
+                    <FaUserGraduate />
+                </a>
+                <a className='icon' href='https://www.linkedin.com/in/ajitzi-ricardo-quintana-ruiz-385a61138/' target='_blank'> 
+                    <FaLinkedinIn />
+                </a>
+            </Dev>
+            <Dev nombre='Naruto 5 Daniel'>
+                <a className='icon' href='https://www.facebook.com/' target='_blank'> 
+                    <FaFacebook />
+                </a>
+                <a className='icon' href='https://github.com/' target='_blank'> 
+                    <FaGithub />
+                </a>
+                <a className='icon' href='' target='_blank'> 
+                    <FaUserGraduate />
+                </a>
+                <a className='icon' href='https://www.linkedin.com/' target='_blank'> 
+                    <FaLinkedinIn />
+                </a>
+            </Dev>
+        </div>
+    )
+}
+
+function Dev(props){
+    const {nombre} = props
+
+    return(
+        <div className='dev'>
+            <span className='dev__name'>{nombre}</span><br></br>
+            {props.children}
         </div>
     )
 }
