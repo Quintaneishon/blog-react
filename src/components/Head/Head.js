@@ -6,13 +6,16 @@ export default function Head(){
     return(
         <div className='Head'>
             <div>
-                Education hub
+                <a>EducationHub</a>
             </div>
             <div>
-                Ingenierías
+                <a href="">Ingenierías</a>
             </div>
             <div>
-                Licenciatura
+                <a href="">Licenciaturas</a>
+            </div>
+            <div>
+                <a href="">Salud</a>
             </div>
         </div>
 
