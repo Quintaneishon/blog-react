@@ -2,16 +2,18 @@
     background-color: black;
     position: fixed;
     width: 100%;
-    height: 10%;
+    height: 10rem;
     z-index: 100;
     color:white;
+    top: 0rem;
+
 
     div{
         display: inline;
-        margin-left: 5%;
+        padding-left: 5%;
         font-size: 1.5em;
         font-weight:600;
-        line-height: 75px;
+        line-height: 10rem;
     }
 
     a{
