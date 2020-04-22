@@ -1,14 +1,16 @@
 import React from 'react';
-import Head from './components/Head';
-import Body from './components/Body/Body';
-import './App.scss';
+import { Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
+import Carrera from './components/Carrera';
 
 function App() {
   return (
-    <div className='App'>
-    <Head />
-    <Body />
-    </div>
+    <main>
+    <Switch>
+      <Route path="/" component={Home} exact />
+      <Route path="/Carreras/:name" component={Carrera} exact />
+    </Switch>
+    </main>
   );
 }
 
