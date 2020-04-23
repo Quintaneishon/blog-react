@@ -20,9 +20,37 @@
         color:white;
         text-decoration: none;
     }
+    a:hover{
+        animation-name: textchange;
+        font-size: medium;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
 
     #Logo{
         font-size: 2rem;
+        animation-name: rainbow;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes textchange {
+        100%{
+            color: #41fffa;
+        }
+    }
+
+    @keyframes rainbow {
+        0%{
+            color:white;
+        }
+        50%{
+            color:#41fffa;
+        }
+        100%{
+            color:white;
+        }
     }
 }
 

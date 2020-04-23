@@ -5,6 +5,7 @@ import './Carrera.scss';
 
 export default function Carrera(){
     let { name } = useParams();
+        
 
     return(
         <div className='Carrera'>
@@ -15,3 +16,4 @@ export default function Carrera(){
         </div>
     )
 }
+

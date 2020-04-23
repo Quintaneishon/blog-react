@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Head from '../Head';
-import Body from '../Body';
+import Body from '../Body/Body.js';
 import './App.scss';
 
 export default function Home(){
