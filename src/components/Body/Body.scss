@@ -2,32 +2,83 @@
     width: 100%;
     top: 10rem;
     position: relative;
-    background-image: url(/Img/paisaje.gif);
+    background-image: url(/Img/paisaje8.gif);
     background-position: top;
-    background-size: cover;
+    background-size:cover;
     color: white;
     text-align: center;
     height: 100%;
+    animation-name: backgroundimages;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+    @keyframes backgroundimages {
+        25%{
+            background-image: url(/Img/paisaje5.gif);
+        }
+        50%{
+            background-image: url(/Img/paisaje6.gif);
+        }
+        75%{
+            background-image: url(/Img/paisaje7.gif);
+        }
+        
+    }
 }
 
 #LogoBody{
     padding: 5% 0 2% 0;
 }
 
+#LogoBody:hover{
+    animation-name: logosize;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logosize{
+    0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(0.6);
+      }
+}
+
 #texta{
-    padding: 2% 0;
+    padding: 5% 0;
     font-size: 4rem;
     font-weight: 600;
+    animation-name: welcome;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
 }
 
 #textb{
-    padding: 1% 0 2% 0;
+    padding: 2% 0 4% 0;
     font-size: 3.5rem;
     font-weight: 600;
+    animation-name: tools;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
 #textc{
-    padding: 1% 0 5% 0;
+    padding: 2% 0 5% 0;
     font-size: 2.5rem;
     font-weight: 400;
 }
+
+@keyframes welcome{
+    0%{
+        color:white;
+    }
+    50%{
+        color:#41fffa;
+    }
+    100%{
+        color:white;
+    }
+}
+
