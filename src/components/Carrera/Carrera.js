@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import Head from '../Head';
 import { useParams } from "react-router-dom";
 import './Carrera.scss';
 
 export default function Carrera(){
-    let { name } = useParams();
+    const { name } = useParams();
 
     return(
         <div className='Carrera'>
             <Head />
             <div className='titulo'>
-                SOy la carrera {name}
+                Lo siento esta carrera no la tenemos aun
             </div>
         </div>
     )
 }
+
+   
+    
+    
