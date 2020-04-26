@@ -3,6 +3,7 @@ import Head from '../Head';
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import {urlApiCarrera} from '../../utils/constants';
+import Loading from '../Loading';
 
 import './Carrera.scss';
 
@@ -20,7 +21,7 @@ export default function Carrera(props){
     return(
         <div className='Carrera'>
             {loading || !result || !carrera.result|| carrera.loading ? (
-          'Cargando ...'
+          <Loading />
         ) : (
           <>
             <Head carreras={result[0]}/>
