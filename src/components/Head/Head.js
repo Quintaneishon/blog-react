@@ -15,24 +15,30 @@ export default function Head(props){
     });
     return(
         <div className='Head'>
-            <div>
-                <a id="Logo">EducationHub</a>
-            </div>
-            <div>
-                <a href="">Ingenierías</a>
-                    <ol>
-                    {ings.map((ing) => (
-                        <li>{ing.Nombre}</li>
-                    ))}
-                    </ol>
-            </div>
-            <div>
-                <a href="">Licenciaturas</a>
-            </div>
-            <div>
-                <a href="">Salud</a>
-                {saluds.map((salud) => (salud.Nombre))}
-            </div>
+           	<ul className="nav">
+                <li><a>EducationHub</a></li>
+                <li><a>Ingenierías</a>
+                    <ul id="submenu">
+                        <li>Materia 1</li>
+                        <li>Materia 2</li>
+                        <li>Materia 3</li>
+                    </ul>
+                </li>
+                <li><a>Licenciaturas</a>
+                    <ul id="submenu">
+                        <li>Materia 1</li>
+                        <li>Materia 2</li>
+                        <li>Materia 3</li>
+                    </ul>
+                </li>
+                <li><a>Salud</a>
+                    <ul id="submenu">
+                        <li>Materia 1</li>
+                        <li>Materia 2</li>
+                        <li>Materia 3</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
     )

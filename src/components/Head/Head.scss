@@ -6,52 +6,51 @@
     z-index: 100;
     color:white;
     top: 0rem;
-
-
-    div{
-        display: inline;
-        padding-left: 5%;
-        font-size: 1.5em;
-        font-weight:600;
-        line-height: 10rem;
-    }
-
-    a{
-        color:white;
-        text-decoration: none;
-    }
-    a:hover{
-        animation-name: textchange;
-        font-size: medium;
-        animation-duration: 500ms;
-        animation-fill-mode: forwards;
-    }
-
-    #Logo{
-        font-size: 2rem;
-        animation-name: rainbow;
-        animation-duration: 5s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-    }
-
-    @keyframes textchange {
-        100%{
-            color: #41fffa;
-        }
-    }
-
-    @keyframes rainbow {
-        0%{
-            color:white;
-        }
-        50%{
-            color:#41fffa;
-        }
-        100%{
-            color:white;
-        }
-    }
+    display: flex;
+    align-items: center;
 }
+
+.Head > ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.Head > ul > li{
+    padding-left: 5%;
+    font-size: medium;
+}
+
+
+.nav > li{
+    display: inline-block;
+}
+
+.nav > li > a{
+    display: block;
+    padding: 15px;
+}
+
+#submenu{
+    position: absolute;
+    list-style: none;
+}
+
+#submenu li{
+    display: none;
+    padding: 5px;
+}
+
+.nav > li:hover #submenu > li{
+    display: block;
+}
+
+#submenu > li:hover{
+    color:red;
+    transition: all .5s;
+    
+}
+
+
 
 
