@@ -8,47 +8,76 @@
     top: 0rem;
     display: flex;
     align-items: center;
-}
 
-.Head > ul{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
+    .namepage{
+        font-size: 120%;
+    }
 
-.Head > ul > li{
-    padding-left: 5%;
-    font-size: medium;
-}
+    ul:first-child{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        li{
+            padding-left: 5%;
+            font-size: medium;
+        }
+    }
+
+    .nav {
+
+        li{
+        display: inline-block;
+
+            a{
+                display: block;
+                padding: 20px;
+            }
+        }
+
+        li:hover{
+            color: #08ffff;
+            transition: all .5s;
+            cursor: pointer;
+        }
+
+        li:hover #submenu > li{
+            display: block;
+        }
+    }
+
+    #submenu{
+        position: absolute;
+        list-style: none;
+        background: gray;
+        color: white;
+        cursor: pointer;
+        width: 18%;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        //border-top-left-radius: 10px;
+        //border-top-right-radius: 10px;
 
 
-.nav > li{
-    display: inline-block;
-}
+        li{
+            display: none;
+            padding: 1px;
+            text-transform: capitalize;
 
-.nav > li > a{
-    display: block;
-    padding: 15px;
-}
+            &:not(:last-child){
+                border-bottom: outset;
+            }
+        }
 
-#submenu{
-    position: absolute;
-    list-style: none;
-}
 
-#submenu li{
-    display: none;
-    padding: 5px;
-}
-
-.nav > li:hover #submenu > li{
-    display: block;
-}
-
-#submenu > li:hover{
-    color:red;
-    transition: all .5s;
+        li:hover{
+            color: #08ffff;
+            transition: all .5s;
     
+        }
+    }
+
+
 }
 
 

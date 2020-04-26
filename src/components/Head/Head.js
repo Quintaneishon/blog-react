@@ -16,26 +16,20 @@ export default function Head(props){
     return(
         <div className='Head'>
            	<ul className="nav">
-                <li><a>EducationHub</a></li>
+                <li><a className="namepage">EducationHub</a></li>
                 <li><a>Ingenierías</a>
                     <ul id="submenu">
-                        <li>Materia 1</li>
-                        <li>Materia 2</li>
-                        <li>Materia 3</li>
+                        {ings.map((ing)=><li><a>{ing.Nombre}</a></li>)}
                     </ul>
                 </li>
                 <li><a>Licenciaturas</a>
                     <ul id="submenu">
-                        <li>Materia 1</li>
-                        <li>Materia 2</li>
-                        <li>Materia 3</li>
+                        {lics.map((lic)=><li><a>{lic.Nombre}</a></li>)}
                     </ul>
                 </li>
                 <li><a>Salud</a>
                     <ul id="submenu">
-                        <li>Materia 1</li>
-                        <li>Materia 2</li>
-                        <li>Materia 3</li>
+                        {saluds.map((salud)=><li><a>{salud.Nombre}</a></li>)}
                     </ul>
                 </li>
             </ul>
