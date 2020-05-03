@@ -6,7 +6,7 @@ import './Body.scss';
 export default function Body(){
     return(
         <div className="Body" >
-                <img src="./Img/Logo2.png" alt="Logo" id="LogoBody" height="42%" width="18%" position="absolute"/>
+                <img src="./Img/Logo.png" alt="Logo" id="LogoBody" height="42%" width="18%" position="absolute"/>
                 <div className="texthome">
                     <h1 id="texta">Welcome to EducationHub / Bienvenido a EducationHub</h1>
                     <h2 id="textb">Herramientas para la educación</h2>

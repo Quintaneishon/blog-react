@@ -16,7 +16,8 @@ export default function Head(props){
     return(
         <div className='Head'>
            	<ul className="nav">
-                <li><a className="namepage">EducationHub</a></li>
+                <li id="linelogo"><img src="./Img/Logo.png" id="logo"></img></li>
+                <li id="linename"><a className="namepage">EducationHub</a></li>
                 <li><a>Ingenierías</a>
                     <ul id="submenu">
                         {ings.map((ing)=><li><a>{ing.Nombre}</a></li>)}

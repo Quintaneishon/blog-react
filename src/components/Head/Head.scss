@@ -17,11 +17,24 @@
         width: 100%;
         display: flex;
         flex-direction: row;
+        align-items: center;
 
-        li{
-            padding-left: 5%;
-            font-size: medium;
+            li{
+                font-size: medium;
+                &:not(#linelogo){
+                    padding-right: 5%;
+                }
+            }
+
+        #logo{
+            max-width: 90px;
+            max-height: 90px;
         }
+
+        #linelogo{
+            padding-left: 2%;
+        }
+        
     }
 
     .nav {
@@ -44,6 +57,7 @@
         li:hover #submenu > li{
             display: block;
         }
+
     }
 
     #submenu{
