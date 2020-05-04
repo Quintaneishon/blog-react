@@ -26,7 +26,7 @@ export default function Footer(){
                 </div>
                 <div className='col-1-of-4'>
                 <div className='footer__navigation'>
-                        <div className='footer__name u-margin-bottom-small'>Naturo 5 Daniel</div>
+                        <div className='footer__name u-margin-bottom-small'>Daniel Vaca Ramírez</div>
                         <ul className='footer__list'>
                             <li className='footer__item'><a href='https://www.facebook.com/naruto5daniel' target='_blank' className='footer__link'><FaFacebook /></a></li>
                             <li className='footer__item'><a href='https://github.com/DanielRamirezX' target='_blank' className='footer__link'><FaGithub /></a></li>

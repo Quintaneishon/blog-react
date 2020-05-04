@@ -1,16 +1,18 @@
+@import "./../../variables.scss";
+
 .Body{
     width: 100%;
     top: 10rem;
     position: relative;
-    background-image: url(/Img/paisaje8.gif);
+    //background-image: url(/Img/paisaje8.gif);
     background-position: top;
     background-size:cover;
-    color: white;
+    color: black;
     text-align: center;
     height: 100%;
-    animation-name: backgroundimages;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+    //animation-name: backgroundimages;
+    //animation-duration: 10s;
+    //animation-iteration-count: infinite;
 
     @keyframes backgroundimages {
         25%{
@@ -49,9 +51,7 @@
     padding: 5% 0;
     font-size: 4rem;
     font-weight: 600;
-    animation-name: welcome;
-    animation-duration: 2s;
-    animation-iteration-count:infinite;
+    color:$color-tertiary-dark;
 }
 
 #textb{
@@ -70,15 +70,19 @@
     font-weight: 400;
 }
 
-@keyframes welcome{
-    0%{
-        color:white;
-    }
-    50%{
-        color:#41fffa;
-    }
-    100%{
-        color:white;
+
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .6;
+    overflow: hidden;
+    &__content{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 }
-

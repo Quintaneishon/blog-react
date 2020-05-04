@@ -20,7 +20,7 @@ export default function Head(props){
                 <li id="linename"><a className="namepage">EducationHub</a></li>
                 <li><a>Ingenierías</a>
                     <ul id="submenu">
-                        {ings.map((ing)=><li><a>{ing.Nombre}</a></li>)}
+                        {ings.map((ing)=><li><a><img src="./Img/IconoSistemas.svg" width="80px" height="80px"/>{ing.Nombre}</a></li>)}
                     </ul>
                 </li>
                 <li><a>Licenciaturas</a>
