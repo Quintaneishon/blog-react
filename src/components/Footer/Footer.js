@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {ReactComponent as Gears} from '../../icons/Gears.svg';
 import { FaFacebook,FaGithub,FaUserGraduate,FaLinkedinIn,FaTwitter } from "react-icons/fa";
 import './Footer.scss';
 
@@ -10,7 +10,7 @@ export default function Footer(){
             <div className='row'>
                 <div className='col-1-of-4'>
                     <div className='footer__logo-box'>
-                        <img src='./Img/devcows.png' alt='Full logo' className='footer__logo' />
+                        <Gears width='58%' height='58%'/>
                     </div>
                 </div>
                 <div className='col-1-of-4'>
@@ -26,7 +26,7 @@ export default function Footer(){
                 </div>
                 <div className='col-1-of-4'>
                 <div className='footer__navigation'>
-                        <div className='footer__name u-margin-bottom-small'>Daniel Vaca Ramírez</div>
+                        <div className='footer__name u-margin-bottom-small'>Naturo 5 Daniel</div>
                         <ul className='footer__list'>
                             <li className='footer__item'><a href='https://www.facebook.com/naruto5daniel' target='_blank' className='footer__link'><FaFacebook /></a></li>
                             <li className='footer__item'><a href='https://github.com/DanielRamirezX' target='_blank' className='footer__link'><FaGithub /></a></li>
