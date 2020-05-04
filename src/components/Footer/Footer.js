@@ -1,5 +1,5 @@
 import React from 'react';
-import {ReactComponent as Gears} from '../../icons/Gears.svg';
+
 import { FaFacebook,FaGithub,FaUserGraduate,FaLinkedinIn,FaTwitter } from "react-icons/fa";
 import './Footer.scss';
 
@@ -10,7 +10,7 @@ export default function Footer(){
             <div className='row'>
                 <div className='col-1-of-4'>
                     <div className='footer__logo-box'>
-                        <Gears width='58%' height='58%'/>
+                        <img src='./Img/devcows.png' alt='Full logo' className='footer__logo' />
                     </div>
                 </div>
                 <div className='col-1-of-4'>
