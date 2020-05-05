@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import {urlApiCarrera} from '../../utils/constants';
 import Loading from '../Loading';
+import Empty from '../Empty';
 
 import './Carrera.scss';
 
@@ -26,9 +27,7 @@ export default function Carrera(props){
           <>
             <Head carreras={result[0]}/>
             {carrera.result[0].length == 0 ? (
-              <div className='titulo'>
-                <h1>no hay</h1>
-              </div>
+              <Empty />
             ):(
               <div className='titulo'>
                 <h1>{carrera.result[0][0].nombre_carrera}</h1>
