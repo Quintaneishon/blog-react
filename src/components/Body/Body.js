@@ -11,7 +11,6 @@ export default function Body(){
                 Your browser is not supported!
             </video>
         </div>
-                <img src="./Icons/IconoSistemas.svg" alt="Logo" id="LogoBody" height="42%" width="18%" position="absolute"/>
                 <div className="texthome">
                     <h1 id="texta">Welcome to EducationHub / Bienvenido a EducationHub</h1>
                     <h2 id="textb">Herramientas para la educación</h2>

@@ -20,17 +20,17 @@ export default function Head(props){
                 <li id="linename"><a className="namepage">EducationHub</a></li>
                 <li><a>Ingenierías</a>
                     <ul id="submenu">
-                        {ings.map((ing)=><li><a><img src="./Icons/IconoSistemas.svg" width="80px" height="80px"/>{ing.Nombre}</a></li>)}
+                        {ings.map((ing,index)=><li key={index}><img className="icon" src={`../../icons/${ing.Icono}`} alt={`${ing.Icono}`} width="80px" height="80px"/><a>{ing.Nombre}</a></li>)}
                     </ul>
                 </li>
                 <li><a>Licenciaturas</a>
                     <ul id="submenu">
-                        {lics.map((lic)=><li><a>{lic.Nombre}</a></li>)}
+                        {lics.map((lic,index)=><li key={index}><img className="icon" src={`../../icons/${lic.Icono}`} alt={`${lic.Icono}`} width="80px" height="80px"/><a>{lic.Nombre}</a></li>)}
                     </ul>
                 </li>
                 <li><a>Salud</a>
                     <ul id="submenu">
-                        {saluds.map((salud)=><li><a>{salud.Nombre}</a></li>)}
+                        {saluds.map((salud,index)=><li key={index}><img className="icon" src={`../../icons/${salud.Icono}`} alt={`${salud.Icono}`} width="80px" height="80px"/><a>{salud.Nombre}</a></li>)}
                     </ul>
                 </li>
             </ul>
