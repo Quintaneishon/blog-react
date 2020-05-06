@@ -5,7 +5,6 @@ import useFetch from "../../hooks/useFetch";
 import {urlApiCarrera,idsCarreras} from '../../utils/constants';
 import Loading from '../Loading';
 import Empty from '../Empty';
-import Footer from '../Footer';
 
 import './Carrera.scss';
 
@@ -17,7 +16,7 @@ export default function Carrera(props){
     const carrera = useFetch(urlApiCarrera+ (id === undefined ? '-1' : id),null);
     
     return(
-        <>
+        <div className='carrera'>
             {loading || !result || !carrera.result|| carrera.loading ? (
           <Loading />
         ) : (
@@ -26,13 +25,13 @@ export default function Carrera(props){
             {carrera.result[0].length == 0 ? (
               <Empty />
             ):(
-              <div className='carrera'>
+              <div className='titulo'>
                 <h1>{carrera.result[0][0].nombre_carrera}</h1>
               </div>
             )}
           </>
         )}
-        </>
+        </div>
     )
 
 
