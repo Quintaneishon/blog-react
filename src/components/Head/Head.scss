@@ -13,6 +13,8 @@
 
     .namepage{
         font-size: 120%;
+        color:white;
+        text-decoration: none;
     }
 
     ul:first-child{
@@ -77,21 +79,26 @@
 
         li{
             display: none;
-            padding: 1px;
+            padding: 5px;
             text-transform: capitalize;
-
             
             .icon{
                 display: table-cell;
+                vertical-align: middle;
+                padding: 4px;
             }
 
             a{
                 display: table-cell;
                 vertical-align: middle;
+                text-decoration: none;
+                text-decoration-color: none;
+                color:white;
             }
 
             &:not(:last-child){
                 border-bottom: outset;
+                width:100%;
             }
         }
 

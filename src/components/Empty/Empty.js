@@ -1,5 +1,5 @@
 import React from 'react'
-import {ReactComponent as Logo} from '../../icons/empty.svg'
+import {ReactComponent as Logo} from './empty.svg'
 import './Empty.scss'
 
 export default function Empty() {
