@@ -7,7 +7,8 @@ import './App.scss';
 
 export default function Home(props){
     const { carreras: { result, loading, error }} = props;
-    return(<div className='App'>
+    return(
+      <div className='App'>
         {loading || !result ? (
           <Loading />
         ) : (

@@ -9,12 +9,10 @@ function App() {
   const carreras = useFetch(urlApiCarreras, null);
   console.log(carreras);
   return (
-    <main>
     <Switch>
       <Route path="/" component={() => <Home carreras={carreras} />} exact />
       <Route path="/Carreras/:name" component={() => <Carrera carreras={carreras} />} exact />
     </Switch>
-    </main>
   );
 }
 

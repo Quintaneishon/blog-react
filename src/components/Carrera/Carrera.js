@@ -7,6 +7,7 @@ import Loading from '../Loading';
 import Empty from '../Empty';
 
 import './Carrera.scss';
+import '../Home/App.scss';
 
 export default function Carrera(props){
     const { carreras: { result, loading, error }} = props;
@@ -16,7 +17,7 @@ export default function Carrera(props){
     const carrera = useFetch(urlApiCarrera+ (id === undefined ? '-1' : id),null);
     
     return(
-        <div className='carrera'>
+        <div className='App'>
             {loading || !result || !carrera.result|| carrera.loading ? (
           <Loading />
         ) : (

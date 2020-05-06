@@ -7,9 +7,10 @@
     height: 10rem;
     z-index: 100;
     color:white;
-    top: 0rem;
-    display: flex;
-    align-items: center;
+    top: 0;
+    left: 0;
+    //display: flex;
+    //align-items: center;
 
     .namepage{
         font-size: 120%;
@@ -70,7 +71,6 @@
         background: gray;
         color: white;
         cursor: pointer;
-        width: 18%;
         border-bottom-right-radius: 3px;
         border-bottom-left-radius: 3px;
         border-top-left-radius: 3px;
