@@ -2,25 +2,22 @@ import React, { useReducer } from 'react';
 import Head from '../Head';
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
-import {urlApiCarrera} from '../../utils/constants';
+import {urlApiCarrera,idsCarreras} from '../../utils/constants';
 import Loading from '../Loading';
 import Empty from '../Empty';
+import Footer from '../Footer';
 
 import './Carrera.scss';
 
 export default function Carrera(props){
     const { carreras: { result, loading, error }} = props;
     const { name } = useParams();
-    let id;
-    if(name.trim() == 'SistemasComputacionales'){
-      id = 0;
-    }else{
-      id = -1;
-    }
-    const carrera = useFetch(urlApiCarrera+id,null);
+
+    const id = idsCarreras[name];
+    const carrera = useFetch(urlApiCarrera+ (id === undefined ? '-1' : id),null);
     
     return(
-        <div className='Carrera'>
+        <>
             {loading || !result || !carrera.result|| carrera.loading ? (
           <Loading />
         ) : (
@@ -29,13 +26,13 @@ export default function Carrera(props){
             {carrera.result[0].length == 0 ? (
               <Empty />
             ):(
-              <div className='titulo'>
+              <div className='carrera'>
                 <h1>{carrera.result[0][0].nombre_carrera}</h1>
               </div>
             )}
           </>
         )}
-        </div>
+        </>
     )
 
 

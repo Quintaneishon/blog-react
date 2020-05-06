@@ -10,7 +10,7 @@ export default function Body(){
                 <source src={`/Img/video.mp4`} type='video/mp4'></source>
                 Your browser is not supported!
             </video>
-        </div>
+            </div>
                 <div className="texthome">
                     <h1 id="texta">Welcome to EducationHub / Bienvenido a EducationHub</h1>
                     <h2 id="textb">Herramientas para la educación</h2>

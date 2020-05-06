@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 import './Head.scss';
 
 export default function Head(props){
@@ -13,24 +13,67 @@ export default function Head(props){
     const saluds = carreras.filter((carrera) => {
         return carrera.Id_Tipo == 3
     });
+
+    let listaIngenierias = [];
+    ings.forEach(ing => {
+        let nameArr = ing.Nombre.split(' ');
+        let name = [];
+        nameArr.forEach(n => {
+            name.push(n.charAt(0).toUpperCase() + n.slice(1));
+        });
+        listaIngenierias.push(name.join(''));
+    });
+
+    let listaLicenciaturas = [];
+    lics.forEach(lic => {
+        let nameArr = lic.Nombre.split(' ');
+        let name = [];
+        nameArr.forEach(n => {
+            name.push(n.charAt(0).toUpperCase() + n.slice(1));
+        });
+        listaLicenciaturas.push(name.join(''));
+    });
+
+    let listaSaluds = [];
+    saluds.forEach(salud => {
+        let nameArr = salud.Nombre.split(' ');
+        let name = [];
+        nameArr.forEach(n => {
+            name.push(n.charAt(0).toUpperCase() + n.slice(1));
+        });
+        listaSaluds.push(name.join(''));
+    });
+
     return(
         <div className='Head'>
            	<ul className="nav">
-                <li id="linelogo"><img src="./Img/Logo.png" id="logo"></img></li>
-                <li id="linename"><a className="namepage" href="http://localhost:3000/">EducationHub</a></li>
+                <li id="linelogo"><Link to='/'><img src="../Img/Logo.png" id="logo"></img></Link></li>
+                <li id="linename"><Link to='/' className="namepage">EducationHub</Link></li>
                 <li><a>Ingenierías</a>
                     <ul id="submenu">
-                        {ings.map((ing,index)=><li key={index}><img className="icon" src={`/Icons/${ing.Icono}`} alt={`${ing.Icono}`} width="50px"/><a href={`Carreras/${index}`}>{ing.Nombre}</a></li>)}
+                        {ings.map((ing,index)=>(
+                            <li key={index}>
+                                <img className="icon" src={`/Icons/${ing.Icono}`} alt={`${ing.Icono}`} width="50px"/>
+                                <Link to={`/Carreras/${listaIngenierias[index]}`}>{ing.Nombre}</Link>
+                            </li>))}
                     </ul>
                 </li>
                 <li><a>Licenciaturas</a>
                     <ul id="submenu">
-                        {lics.map((lic,index)=><li key={index}><img className="icon" src={`/Icons/${lic.Icono}`} alt={`${lic.Icono}`} width="50px"/><a>{lic.Nombre}</a></li>)}
+                    {lics.map((lic,index)=>(
+                            <li key={index}>
+                                <img className="icon" src={`/Icons/${lic.Icono}`} alt={`${lic.Icono}`} width="50px"/>
+                                <Link to={`/Carreras/${listaLicenciaturas[index]}`}>{lic.Nombre}</Link>
+                            </li>))}
                     </ul>
                 </li>
                 <li><a>Salud</a>
                     <ul id="submenu">
-                        {saluds.map((salud,index)=><li key={index}><img className="icon" src={`/Icons/${salud.Icono}`} alt={`${salud.Icono}`} width="50px"/><a>{salud.Nombre}</a></li>)}
+                    {saluds.map((salud,index)=>(
+                            <li key={index}>
+                                <img className="icon" src={`/Icons/${salud.Icono}`} alt={`${salud.Icono}`} width="50px"/>
+                                <Link to={`/Carreras/${listaSaluds[index]}`}>{salud.Nombre}</Link>
+                            </li>))}
                     </ul>
                 </li>
             </ul>
