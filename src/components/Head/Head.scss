@@ -9,8 +9,8 @@
     color:white;
     top: 0;
     left: 0;
-    //display: flex;
-    //align-items: center;
+    display: block;
+    align-items: center;
 
     .namepage{
         font-size: 120%;
@@ -68,18 +68,17 @@
     #submenu{
         position: absolute;
         list-style: none;
-        background: gray;
+        background: #18709C;
         color: white;
         cursor: pointer;
-        border-bottom-right-radius: 3px;
-        border-bottom-left-radius: 3px;
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
 
 
         li{
             display: none;
-            padding: 5px;
             text-transform: capitalize;
             
             .icon{
@@ -97,7 +96,9 @@
             }
 
             &:not(:last-child){
-                border-bottom: outset;
+                border-bottom: solid;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
                 width:100%;
             }
         }
@@ -106,7 +107,7 @@
         li:hover{
             color: #08ffff;
             transition: all .5s;
-    
+            padding: 10px;
         }
     }
 
