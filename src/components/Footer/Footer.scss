@@ -2,13 +2,18 @@
 
 .footer {
     background-color: $color-gray-dark-3;
-    padding: 5rem 0;
+    padding: 3rem 5rem;
     font-size: 1.4rem;
     color: $color-gray-light-1;
 
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     &__logo-box {
         text-align: center;
-        margin-bottom: 8rem;
     }
 
     &__logo {
@@ -18,17 +23,19 @@
 
     &__navigation {
         //border-top: 1px solid $color-gray-dark;
-        padding-top: 2rem;
         display: inline-block;
+        flex: 0 0 20%;
     }
 
     &__list {
         list-style: none;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__item {
-        display: inline-block;
-
         &:not(:last-child) {
             margin-right: 1.5rem;
         }
@@ -56,10 +63,8 @@
 
     &__copyright{
         //border-top: 1px solid $color-gray-dark;
-        padding-top: 2rem;
-        width: 80%;
-        float: right;
         text-align: justify;
+        flex: 0 0 20%;
     }
 
     &__name{
@@ -70,5 +75,6 @@
     &__footer {
         font-size: 1.4rem;
         color: $color-gray-dark-2;
+        margin-top: 5rem;
     }
 }
