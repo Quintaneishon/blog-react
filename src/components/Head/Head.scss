@@ -23,11 +23,12 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: start;
 
             li{
                 font-size: medium;
                 &:not(#linelogo){
-                    padding-right: 5%;
+                    padding-right: 2.5em;
                 }
             }
 
@@ -68,7 +69,7 @@
     #submenu{
         position: absolute;
         list-style: none;
-        background: #18709C;
+        background: rgba(0, 0, 0, 0.301);
         color: white;
         cursor: pointer;
         border-bottom-right-radius: 15px;
@@ -79,35 +80,36 @@
 
         li{
             display: none;
+            align-items: center;
+            justify-content: center;
             text-transform: capitalize;
+            width: 100%;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
             
             .icon{
-                display: table-cell;
+                display: inline-block;
+                margin: .5em;
                 vertical-align: middle;
-                padding: 4px;
             }
 
             a{
-                display: table-cell;
-                vertical-align: middle;
+                display: inline-block;
                 text-decoration: none;
-                text-decoration-color: none;
                 color:white;
             }
 
-            &:not(:last-child){
-                border-bottom: solid;
-                border-bottom-left-radius: 20px;
-                border-bottom-right-radius: 20px;
-                width:100%;
-            }
+
         }
 
 
         li:hover{
+            background: rgba(81, 201, 175, 0.562);
+            display: block;
             color: #08ffff;
             transition: all .5s;
-            padding: 10px;
         }
     }
 
