@@ -31,13 +31,13 @@ export default function Carrera(props){
               <div className='carrera'>
                 <div className='carrera__header'>
                   <div className='carrera__header-picture'
-                    style={{backgroundImage: `url(${carrera.result[0][0].imagen_carrera})`}}
+                    style={{backgroundImage: `url(${carrera.result[0][0].imagen_carrera})`, opacity: "0.2"}}
                   >
                     &nbsp;
                   </div>
-                  <div className='carrera__header-title'>
-                    {carrera.result[0][0].nombre_carrera}
-                  </div>
+                  <h4 className='carrera__header-title'>
+                  <span className="carrera__header-title--span">{carrera.result[0][0].nombre_carrera}</span>
+                  </h4>
                 </div>
                 <div className='carrera__container'>
                   <SideBar />

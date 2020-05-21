@@ -21,11 +21,29 @@
     &__header{
         background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
         margin: 0 2.3rem;
-
+        position: relative;
+        
         &-picture{
             background-size: cover;
             height: 23rem;
             background-blend-mode: screen;
+        }
+        
+        &-title{
+            font-size: 2.8rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            text-align: right;
+            color: #fff;
+            position: absolute;
+            top: 12rem;
+            right: 2rem;
+            width: 25%;
+            
+            &--span{
+                -webkit-box-decoration-break: clone;
+                box-decoration-break: clone;
+            }
         }
     }
 
