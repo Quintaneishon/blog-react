@@ -5,6 +5,7 @@ import useFetch from "../../hooks/useFetch";
 import {urlApiCarrera,idsCarreras} from '../../utils/constants';
 import Loading from '../Loading';
 import Empty from '../Empty';
+import SideBar from '../SideBar';
 
 import './Carrera.scss';
 import '../Home/App.scss';
@@ -15,7 +16,8 @@ export default function Carrera(props){
 
     const id = idsCarreras[name];
     const carrera = useFetch(urlApiCarrera+ (id === undefined ? '-1' : id),null);
-    
+    console.log(carrera);
+
     return(
         <div className='App'>
             {loading || !result || !carrera.result|| carrera.loading ? (
@@ -26,8 +28,23 @@ export default function Carrera(props){
             {carrera.result[0].length == 0 ? (
               <Empty />
             ):(
-              <div className='titulo'>
-                <h1>{carrera.result[0][0].nombre_carrera}</h1>
+              <div className='carrera'>
+                <div className='carrera__header'>
+                  <div className='carrera__header-picture'
+                    style={{backgroundImage: `url(${carrera.result[0][0].imagen_carrera})`}}
+                  >
+                    &nbsp;
+                  </div>
+                  <div className='carrera__header-title'>
+                    {carrera.result[0][0].nombre_carrera}
+                  </div>
+                </div>
+                <div className='carrera__container'>
+                  <SideBar />
+                  <div className='carrera__content'>
+                    Soy el contenido
+                  </div>
+                </div>
               </div>
             )}
           </>

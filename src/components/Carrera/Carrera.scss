@@ -1,5 +1,36 @@
+@import '../../variables.scss';
+
 .titulo{
     width: 100%;
     top: 10rem;
     position: absolute;
+}
+
+.carrera{
+
+    background-color: #faf9f9;
+    margin-top: 10rem;
+
+    &__container{
+        max-width: 128rem;
+        margin: 8rem auto;
+        display: flex;
+        margin-top: 0;
+    }
+
+    &__header{
+        background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+        margin: 0 2.3rem;
+
+        &-picture{
+            background-size: cover;
+            height: 23rem;
+            background-blend-mode: screen;
+        }
+    }
+
+    &__content{
+        background-color: yellowgreen;
+        flex: 1;
+    }
 }
