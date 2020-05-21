@@ -10,12 +10,12 @@
 
     background-color: #faf9f9;
     margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
 
     &__container{
-        max-width: 128rem;
-        margin: 8rem auto;
         display: flex;
-        margin-top: 0;
+        margin: 0 2.3rem;
     }
 
     &__header{
