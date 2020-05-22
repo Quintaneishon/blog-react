@@ -44,7 +44,7 @@ export default function Carrera(props){
                   <SideBar />
                   <div className='carrera__content'>
                     <div>
-                      {carrera.result[1].map(herr=><p>herr.</p>)}
+                      {carrera.result[1].map(herr=><p>{herr.Nombre}</p>)}
                     </div>
                   </div>
                 </div>
