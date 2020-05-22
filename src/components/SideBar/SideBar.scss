@@ -1,23 +1,45 @@
 .side-bar{
-    background-color: #181528;
+    background-color:hsl(0,0,10);
     color: white;
     text-align: center;
-    flex: 0  2%;
+    flex: 0  18%;
+    flex-direction: column;
+    
     
     div:not(:last-of-type){
-        border-bottom: outset;
+
+    }
+
+    #title{
+        text-align: left;
+        margin-left: 3rem;
+        margin-top: 1.5rem;
     }
 
     div{
-        display: none; 
+        display: table;
+        margin: 2rem 0;
+        width: 0%;
+        height: 3rem;
+        text-align: initial;
+
+        #icon{
+            height: 1.75rem;
+            width: 1.75rem;
+            fill: white;
+            margin-right: 1rem;
+            margin-left: 3rem;
+            vertical-align: middle;
+        }
+        
         a{
-           
+           display: inline-table;
         }
     }
 
-}
+    div:hover{
+        width: 100%;
+        background-color: white;
+    }
 
-.side-bar:hover{
-    flex: 0 18%;
-    transition: all 1s;
 }
