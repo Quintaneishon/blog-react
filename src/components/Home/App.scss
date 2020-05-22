@@ -197,3 +197,34 @@ body {
       animation-fill-mode: backwards;
     }
   }
+
+.btn-inline{
+  border: none;
+  color: $color-primary;
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all .2s;
+  text-decoration: none;
+
+  span {
+      margin-left: 3px;
+      transition: margin-left .2s;
+  }
+
+  &:hover {
+      color: $color-gray-dark;
+      transform: scale(1.1);
+
+      span {
+          margin-left: 8px;
+      }
+  }
+
+  &:focus{
+      outline: none;
+  }
+}

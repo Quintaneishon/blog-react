@@ -6,6 +6,7 @@ import {urlApiCarrera,idsCarreras} from '../../utils/constants';
 import Loading from '../Loading';
 import Empty from '../Empty';
 import SideBar from '../SideBar';
+import Herramientas from '../Herramientas';
 
 import './Carrera.scss';
 import '../Home/App.scss';
@@ -43,9 +44,7 @@ export default function Carrera(props){
                 <div className='carrera__container'>
                   <SideBar />
                   <div className='carrera__content'>
-                    <div>
-                      {carrera.result[1].map(herr=><p>{herr.Nombre}</p>)}
-                    </div>
+                      <Herramientas data={carrera.result[1]} />
                   </div>
                 </div>
               </div>
