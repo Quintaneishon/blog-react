@@ -9,7 +9,7 @@ export default function Footer(){
         <footer className='footer'>
             <div className='footer__row'>
                 <div className='footer__logo-box'>
-                    <img src='./Img/devcows.png' alt='Full logo' className='footer__logo' />
+                    <img src='../Img/devcows.png' alt='Full logo' className='footer__logo' />
                 </div>
                 <div className='footer__navigation'>
                     <div className='footer__name u-margin-bottom-small'>Ajitzi R. Quintana Ruiz</div>

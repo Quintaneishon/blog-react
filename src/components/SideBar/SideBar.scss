@@ -1,4 +1,23 @@
 .side-bar{
-    background-color: orangered;
-    flex: 0 0 18%;
+    background-color: #181528;
+    color: white;
+    text-align: center;
+    flex: 0  2%;
+    
+    div:not(:last-of-type){
+        border-bottom: outset;
+    }
+
+    div{
+        display: none; 
+        a{
+           
+        }
+    }
+
+}
+
+.side-bar:hover{
+    flex: 0 18%;
+    transition: all 1s;
 }

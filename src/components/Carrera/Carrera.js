@@ -17,6 +17,7 @@ export default function Carrera(props){
     const id = idsCarreras[name];
     const carrera = useFetch(urlApiCarrera+ (id === undefined ? '-1' : id),null);
     console.log(carrera);
+    let data = [];
 
     return(
         <div className='App'>
@@ -31,7 +32,7 @@ export default function Carrera(props){
               <div className='carrera'>
                 <div className='carrera__header'>
                   <div className='carrera__header-picture'
-                    style={{backgroundImage: `url(${carrera.result[0][0].imagen_carrera})`, opacity: "0.2"}}
+                    style={{backgroundImage: `url(${carrera.result[0][0].imagen_carrera})`, opacity: "0.6"}}
                   >
                     &nbsp;
                   </div>
@@ -42,7 +43,9 @@ export default function Carrera(props){
                 <div className='carrera__container'>
                   <SideBar />
                   <div className='carrera__content'>
-                    Soy el contenido
+                    <div>
+                      {carrera.result[1].map(herr=><p>herr.</p>)}
+                    </div>
                   </div>
                 </div>
               </div>
