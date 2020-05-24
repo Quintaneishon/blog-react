@@ -209,6 +209,8 @@ body {
   cursor: pointer;
   transition: all .2s;
   text-decoration: none;
+  align-self: start;
+
 
   span {
       margin-left: 3px;
@@ -227,4 +229,8 @@ body {
   &:focus{
       outline: none;
   }
+}
+
+.parrafo:not(:last-of-type) {
+  margin-bottom: 2rem;
 }

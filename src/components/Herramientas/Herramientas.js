@@ -1,4 +1,5 @@
 import React from 'react';
+import List from '../List';
 
 import './Herramientas.scss';
 
@@ -26,31 +27,44 @@ function Herramienta(props){
     
     return(
         <div className='herramienta'>
-            <div className='herramienta__head'>
-                <img src={`${Icono}`} width="100%" height="100%"></img>
+            <div className='herramienta__head' style={{    
+                backgroundImage: `url(${Icono})`,
+                backgroundSize: 'cover'
+            }}>
             </div>
             <div className='herramienta__body'>
-                <div className='herramienta__nombre'>
-                    {Nombre}
-                    <span className='herramienta__costo'>
-                        {Costo}
-                    </span>
-                </div>
+                <div className='herramienta__detalles'>
+                    <div className='herramienta__detalles-nombre'>
+                        {Nombre}
+                    </div>
+                    <div className='herramienta__detalles-costo'>
+                        {'$1000'}
+                    </div>
+                </div> 
                 <div className='herramienta__descripcion'>
                     {Descripcion}
                 </div>
                 <div className='herramienta__opiniones'>
-                    <div className='herramienta__opiniones__pros'>
-                        {Pros}
+                    <div className='herramienta__opiniones__container herramienta__opiniones__container-pros'>
+                        <div className='herramienta__opiniones-title'>Pros</div>
+                        <div className='herramienta__opiniones__pros'>
+                            <List arr={Pros.split('-')} />
+                        </div>
                     </div>
-                    <div className='herramienta__opiniones__contras'>
-                        {Contras}
+                    <div className='herramienta__opiniones__container'>
+                        <div className='herramienta__opiniones-title'>Contras</div>
+                        <div className='herramienta__opiniones__contras'>
+                            <List arr={Contras.split('-')} />
+                        </div>
                     </div>
                 </div>
-                <a className='btn-inline' href={Link} target='__blank'>
-                    Saber mas &rarr;
-                </a>
+                <div className='herramienta__footer'>
+                    <a className='btn-inline' href={Link} target='__blank'>
+                        Saber mas &rarr;
+                    </a>
                 </div>
             </div>
+        </div>
+
     )
 }

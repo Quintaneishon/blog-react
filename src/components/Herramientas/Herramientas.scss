@@ -1,6 +1,9 @@
+@import '../../variables.scss';
+
 .herramientas{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .herramienta{
@@ -9,40 +12,86 @@
     flex: 0 0 35%;
     margin: 3rem auto;
     border-radius: 10px;
+    max-width: 38.5rem;
 
-    &__body{padding:0 3rem 3rem 3rem;}
+    &__body{
+        padding:0 3rem 3rem 3rem;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
 
     &__head{
         height: 15rem;
         background-color: yellowgreen;
         padding: 0 !important;
         border-radius: 10px 10px 0 0;
+        margin-bottom: 1.5rem;
         img{
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
         }
     }
 
-    &__nombre{
+    &__detalles{
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
 
-    }
-
-    &__costo{
-
+        &-nombre{
+            background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+            padding: 0 1.5rem;
+            border-radius: 100px;
+            text-transform: uppercase;
+            color: $color-gray-dark-3;
+            margin-right: 1rem;
+            box-shadow: 0 1rem 1.5rem rgba(0,0,0,.06);
+        }
+    
+        &-costo{
+            color: $color-gray-dark-2;
+            font-size: 1.4rem;
+        }
+    
     }
 
     &__descripcion{
-
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #f4f2f2;
     }
 
     &__opiniones{
-        &__pros{
+        display: flex;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #f4f2f2;
 
+        &-title{
+            text-transform: uppercase;
+            color: $color-primary-dark;
+            margin-bottom: 1rem;
+        }
+
+        &__container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__container-pros{
+            flex: 0 0 50%;
+        }
+
+        &__pros{
+            padding-right: .75rem;
+            border-right: 1px solid #f4f2f2;
         }
 
         &__contras{
-
+            padding-left: .8rem;
         }
+
     }
 
 }
