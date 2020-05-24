@@ -27,7 +27,7 @@ function Herramienta(props){
     return(
         <div className='herramienta'>
             <div className='herramienta__head'>
-                {Icono}
+                <img src={`${Icono}`} width="100%" height="100%"></img>
             </div>
             <div className='herramienta__body'>
                 <div className='herramienta__nombre'>
