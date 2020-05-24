@@ -38,7 +38,7 @@ function Herramienta(props){
                         {Nombre}
                     </div>
                     <div className='herramienta__detalles-costo'>
-                        {'$1000'}
+                        {Costo ? (`De pago`)  : ('Gratis')}
                     </div>
                 </div> 
                 <div className='herramienta__descripcion'>

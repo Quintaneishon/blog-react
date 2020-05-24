@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .side-bar{
     background-color:hsl(0,0,10);
     color: white;
@@ -15,13 +17,14 @@
         margin: 1.5rem 0 1.5rem 3rem;
     }
 
-    #anim{
+    .anim{
         display: flex;
         width: 100%;
-        background: linear-gradient(to right, rgb(88,62,126) 30%, hsl(0,0,10) 50%);
+        background: linear-gradient(to right, $color-primary-dark 30%, hsl(0,0,10) 50%);
         background-size: 200% 100%;
         background-position: right bottom;
         transition: all .5s ease-out;
+        cursor: pointer;
 
         > div{
             display: inline-flex;
@@ -45,8 +48,11 @@
         }
     }
 
-    #anim:hover{
+    .anim:hover{
         background-position: left bottom;
     }
 
+    .anim-activo{
+        background-position: left bottom;
+    }
 }

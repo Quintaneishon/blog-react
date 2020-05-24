@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useState } from 'react';
 import Head from '../Head';
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
@@ -14,6 +14,7 @@ import '../Home/App.scss';
 export default function Carrera(props){
     const { carreras: { result, loading, error }} = props;
     const { name } = useParams();
+    const [activo,setActivo] = useState('Herramientas');
 
     const id = idsCarreras[name];
     const carrera = useFetch(urlApiCarrera+ (id === undefined ? '-1' : id),null);
@@ -42,9 +43,12 @@ export default function Carrera(props){
                   </h4>
                 </div>
                 <div className='carrera__container'>
-                  <SideBar />
+                  <SideBar activo={activo} setActivo={setActivo} />
                   <div className='carrera__content'>
-                      <Herramientas data={carrera.result[1]} />
+                    {(activo === 'Herramientas') ? 
+                      (<Herramientas data={carrera.result[1]} />) :
+                      (<span>Nada aun</span>)
+                    }
                   </div>
                 </div>
               </div>

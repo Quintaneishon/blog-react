@@ -3,20 +3,20 @@
 .list{
     list-style: none;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
 
     &__item{
-        flex: 0 0 50%;
+        flex: 0 0 100%;
         margin-bottom: .7rem;
+        display: flex;
     }
 
     &__item:before{
         content: '';
+        flex: 0 0 4%;
         display: inline-block;
         height: 1rem;
-        width: 1rem;
-        margin-right: .7rem;
+        margin: .7rem .7rem 0 0;
 
         //older browsers
         background-image: url(/Icons/chevron-thin-right.svg);

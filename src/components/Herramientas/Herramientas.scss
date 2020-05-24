@@ -9,10 +9,10 @@
 .herramienta{
     background-color: #fff;
     box-shadow: 0 2rem 6rem rgba(0,0,0,.06);
-    flex: 0 0 35%;
+    flex: 0 0 45%;
     margin: 3rem auto;
     border-radius: 10px;
-    max-width: 38.5rem;
+    max-width: 49rem;
 
     &__body{
         padding:0 3rem 3rem 3rem;
@@ -23,7 +23,6 @@
 
     &__head{
         height: 15rem;
-        background-color: yellowgreen;
         padding: 0 !important;
         border-radius: 10px 10px 0 0;
         margin-bottom: 1.5rem;
@@ -39,11 +38,11 @@
         align-items: center;
 
         &-nombre{
-            background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+            background-color: $color-primary-dark;
             padding: 0 1.5rem;
             border-radius: 100px;
             text-transform: uppercase;
-            color: $color-gray-dark-3;
+            color: #fff;
             margin-right: 1rem;
             box-shadow: 0 1rem 1.5rem rgba(0,0,0,.06);
         }
