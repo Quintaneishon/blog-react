@@ -2,7 +2,7 @@
     background-color:hsl(0,0,10);
     color: white;
     text-align: center;
-    flex: 0  15%;
+    flex: 0  16.5%;
     flex-direction: column;
     
     
@@ -12,34 +12,41 @@
 
     #title{
         text-align: left;
-        margin-left: 3rem;
-        margin-top: 1.5rem;
+        margin: 1.5rem 0 1.5rem 3rem;
     }
 
-    div{
-        display: table;
-        margin: 2rem 0;
-        width: 0%;
-        height: 3rem;
-        text-align: initial;
-
-        #icon{
-            height: 1.75rem;
-            width: 1.75rem;
-            fill: white;
-            margin-right: 1rem;
-            margin-left: 3rem;
-            vertical-align: middle;
-        }
-        
-        a{
-           display: inline-table;
-        }
-    }
-
-    div:hover{
+    #anim{
+        display: flex;
         width: 100%;
-        background-color: white;
+        background: linear-gradient(to right, rgb(88,62,126) 30%, hsl(0,0,10) 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s ease-out;
+
+        > div{
+            display: inline-flex;
+            margin: 1rem 0;
+            width: 100%;
+            height: 4rem;
+            align-items: center;
+
+            #icon{
+                height: 1.75rem;
+                width: 1.75rem;
+                fill: white;
+                margin-right: 1rem;
+                margin-left: 3rem;
+                text-align: left;
+            }
+            
+            a{
+                text-align: left;
+            }
+        }
+    }
+
+    #anim:hover{
+        background-position: left bottom;
     }
 
 }
