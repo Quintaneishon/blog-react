@@ -8,7 +8,7 @@ export default function SideBar(props){
     return(
         <div className='side-bar'>
             <h2 id="title">Menú</h2>
-            <div id="Herramientas" className={'anim' + ('Herramientas'===activo ? ' anim-activo' : '')} onClick={() => setActivo('Herramientas')}><div><svg id="icon"><use xlinkHref="../Icons/sprite.svg#icon-tools"></use></svg><a>Herramientas/Cursos</a></div></div>
+            <div id="Herramientas" className={'anim' + ('Herramientas'===activo ? ' anim-activo' : '')} onClick={() => setActivo('Herramientas')}><div><svg id="icon"><use xlinkHref="../Icons/sprite.svg#icon-tools"></use></svg><a>Herramientas</a></div></div>
             <div id="Cursos" className={'anim' + ('Cursos'===activo ? ' anim-activo' : '')} onClick={() => setActivo('Cursos')}><div><svg id="icon"><use xlinkHref="../Icons/sprite.svg#icon-book"></use></svg><a>Cursos</a></div></div>
             <div id="Apuntes" className={'anim' + ('Apuntes'===activo ? ' anim-activo' : '')} onClick={() => setActivo('Apuntes')}><div><svg id="icon"><use xlinkHref="../Icons/sprite.svg#icon-pencil"></use></svg><a>Apuntes</a></div></div>
             <div id="Temario" className={'anim' + ('Temario'===activo ? ' anim-activo' : '')} onClick={() => setActivo('Temario')}><div><svg id="icon"><use xlinkHref="../Icons/sprite.svg#icon-browser"></use></svg><a>Temario General</a></div></div>

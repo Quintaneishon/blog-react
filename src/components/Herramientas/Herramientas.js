@@ -27,10 +27,8 @@ function Herramienta(props){
     
     return(
         <div className='herramienta'>
-            <div className='herramienta__head' style={{    
-                backgroundImage: `url(${Icono})`,
-                backgroundSize: 'cover'
-            }}>
+            <div className='herramienta__head'>
+                <img alt={"Imagen "+ Nombre} src={Icono}/>
             </div>
             <div className='herramienta__body'>
                 <div className='herramienta__detalles'>

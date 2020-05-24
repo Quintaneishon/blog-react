@@ -5,4 +5,6 @@ export const idsCarreras = {
     SistemasComputacionales: 0,
     Industrial: 1,
     Odontologia: 2,
+    Quimica: 3,
+    Administracion:4
 }

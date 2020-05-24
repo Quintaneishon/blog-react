@@ -53,6 +53,7 @@
     }
 
     .anim-activo{
-        background-position: left bottom;
+        background: linear-gradient(to right, $color-primary-dark 0%, hsl(0,0,10) 15%);
     }
 }
+

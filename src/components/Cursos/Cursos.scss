@@ -1,12 +1,12 @@
 @import '../../variables.scss';
 
-.herramientas{
+.cursos{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
 }
 
-.herramienta{
+.curso{
     background-color: #fff;
     box-shadow: 0 2rem 6rem rgba(0,0,0,.06);
     flex: 0 0 40%;
