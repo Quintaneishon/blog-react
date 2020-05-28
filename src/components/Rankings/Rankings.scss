@@ -1,0 +1,157 @@
+@import '../../variables.scss';
+
+@keyframes grow1 {
+    0% {
+        flex: 0 0 0rem;
+    }
+
+    50%{
+        flex: 0 0 15rem;
+    }
+
+    100% {
+        flex: 0 0 30rem;
+    }
+}
+
+@keyframes grow2 {
+    0% {
+        flex: 0 0 0rem;
+    }
+
+    50%{
+        flex: 0 0 11.625rem;
+    }
+
+    100% {
+        flex: 0 0 23.25rem;
+    }
+}
+
+@keyframes grow3 {
+    0% {
+        flex: 0 0 0rem;
+    }
+
+    50%{
+        flex: 0 0 8.25rem;
+    }
+
+    100% {
+        flex: 0 0 16.5rem;
+    }
+}
+
+@keyframes grow4 {
+    0% {
+        flex: 0 0 0rem;
+    }
+
+    50%{
+        flex: 0 0 4.875rem;
+    }
+
+    100% {
+        flex: 0 0 9.75rem;
+    }
+}
+
+@keyframes grow5 {
+    0% {
+        flex: 0 0 0rem;
+    }
+
+    50%{
+        flex: 0 0 1.5rem;
+    }
+
+    100% {
+        flex: 0 0 3rem;
+    }
+}
+
+.rankings{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #faf9f5;
+}
+
+.ranking{
+    padding: 3rem;
+    margin: 3rem;
+    width: 13rem;
+    height: 44.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__container{
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    &__posicion{
+        font-size: 3rem;
+        font-weight: 100;
+        color: $color-primary-dark;
+    }
+
+    &__nombre{
+        font-size: 1.4rem;
+    }
+}
+
+.top-{
+    &1:before{
+        display: block;
+        content: "";
+        width: 3rem;
+        background-image: linear-gradient(to bottom, #82E7E0, $color-primary-dark);
+        box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+        animation: grow1 2s forwards;
+    }
+
+    &2:before{
+        display: block;
+        content: "";
+        width: 3rem;
+        background-image: linear-gradient(to bottom, #82E7E0, $color-primary-dark);   
+        box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+        animation: grow2 2s forwards;
+    }
+
+    &3:before{
+        display: block;
+        content: "";
+        width: 3rem;
+        background-image: linear-gradient(to bottom, #82E7E0, $color-primary-dark);
+        box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+        animation: grow3 2s forwards;
+    }
+
+    &4:before{
+        display: block;
+        content: "";
+        width: 3rem;
+        background-image: linear-gradient(to bottom, #82E7E0, $color-primary-dark);
+        box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+        animation: grow4 2s forwards;
+    }
+
+    &5:before{
+        display: block;
+        content: "";
+        width: 3rem;
+        background-image: linear-gradient(to bottom, #82E7E0, $color-primary-dark);
+        box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+        animation: grow5 2s forwards;
+    }
+}
+
+.creditos{
+    padding: 2rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
