@@ -48,12 +48,11 @@ export default function Head(props){
         <div className='Head'>
            	<ul className="nav">
                 <li id="linelogo"><Link to='/'><img src="../Img/Logo.png" id="logo"></img></Link></li>
-                <li id="linename"><Link to='/' className="namepage">EducationHub</Link></li>
                 <li><a>Ingenierías</a>
                     <ul id="submenu">
                         {ings.map((ing,index)=>(
                             <li key={index}>
-                                <img className="icon" src={`/Icons/${ing.Icono}`} alt={`${ing.Icono}`} width="50px"/>
+                                <img className="icon" src={ing.Icono} alt={`${ing.Icono}`} width="50px"/>
                                 <Link to={`/Carreras/${listaIngenierias[index]}`}>{ing.Nombre}</Link>
                             </li>))}
                     </ul>
@@ -62,7 +61,7 @@ export default function Head(props){
                     <ul id="submenu">
                     {lics.map((lic,index)=>(
                             <li key={index}>
-                                <img className="icon" src={`/Icons/${lic.Icono}`} alt={`${lic.Icono}`} width="50px"/>
+                                <img className="icon" src={lic.Icono} alt={`${lic.Icono}`} width="50px"/>
                                 <Link to={`/Carreras/${listaLicenciaturas[index]}`}>{lic.Nombre}</Link>
                             </li>))}
                     </ul>
@@ -71,7 +70,7 @@ export default function Head(props){
                     <ul id="submenu">
                     {saluds.map((salud,index)=>(
                             <li key={index}>
-                                <img className="icon" src={`/Icons/${salud.Icono}`} alt={`${salud.Icono}`} width="50px"/>
+                                <img className="icon" src={salud.Icono} alt={`${salud.Icono}`} width="50px"/>
                                 <Link to={`/Carreras/${listaSaluds[index]}`}>{salud.Nombre}</Link>
                             </li>))}
                     </ul>
