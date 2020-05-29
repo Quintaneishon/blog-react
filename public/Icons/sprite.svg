@@ -28,5 +28,8 @@
 <symbol id="icon-stats-bars" viewBox="0 0 32 32">
 <path d="M0 26h32v4h-32zM4 18h4v6h-4zM10 10h4v14h-4zM16 16h4v8h-4zM22 4h4v20h-4z"></path>
 </symbol>
+<symbol id="icon-chevron-thin-down" viewBox="0 0 32 32">
+<path d="M17.418 6.109c0.272-0.268 0.709-0.268 0.979 0s0.271 0.701 0 0.969l-7.908 7.83c-0.27 0.268-0.707 0.268-0.979 0l-7.908-7.83c-0.27-0.268-0.27-0.701 0-0.969s0.709-0.268 0.979 0l7.419 7.141 7.418-7.141z"></path>
+</symbol>
 </defs>
 </svg>

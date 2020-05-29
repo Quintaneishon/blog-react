@@ -9,6 +9,7 @@ import SideBar from '../SideBar';
 import Herramientas from '../Herramientas';
 import Cursos from '../Cursos';
 import Rankings from '../Rankings';
+import Apuntes from '../Apuntes';
 
 import './Carrera.scss';
 import '../Home/App.scss';
@@ -53,6 +54,8 @@ export default function Carrera(props){
                       (<Cursos data={carrera.result[3]} />):
                       (activo === 'Ranking') ?
                       (<Rankings data={carrera.result[0]} />):
+                      (activo === 'Apuntes') ?
+                      (<Apuntes  />):
                       <span>Nada Aun</span>
                     }
                   </div>

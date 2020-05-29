@@ -1,0 +1,35 @@
+.apuntes{
+    &__container{
+
+    }
+
+    &__item{
+        background-color: #fff;
+        margin: 2rem;
+        padding: 2rem;
+        border-radius: 3px;
+        box-shadow: 0 2rem 6rem rgba(0,0,0,.06);
+    }
+
+    &__icon{
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    &__nombre{
+        border-bottom: 1px solid #f4f2f2;
+        padding: 1rem;
+
+        &-activo{
+
+        }
+    }
+
+    &__lista{
+        list-style: none;
+
+        &-item{
+
+        }
+    }
+}

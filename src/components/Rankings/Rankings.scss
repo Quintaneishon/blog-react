@@ -110,6 +110,7 @@
         width: 3rem;
         background-image: linear-gradient(to bottom, #82E7E0, $color-primary-dark);
         box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+        -webkit-animation: grow1 2s forwards;
         animation: grow1 2s forwards;
     }
 
@@ -119,6 +120,7 @@
         width: 3rem;
         background-image: linear-gradient(to bottom, #82E7E0, $color-primary-dark);   
         box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+        -webkit-animation: grow2 2s forwards;
         animation: grow2 2s forwards;
     }
 
@@ -128,6 +130,7 @@
         width: 3rem;
         background-image: linear-gradient(to bottom, #82E7E0, $color-primary-dark);
         box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+        -webkit-animation: grow3 2s forwards;
         animation: grow3 2s forwards;
     }
 
@@ -137,6 +140,7 @@
         width: 3rem;
         background-image: linear-gradient(to bottom, #82E7E0, $color-primary-dark);
         box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+        -webkit-animation: grow4 2s forwards;
         animation: grow4 2s forwards;
     }
 
@@ -146,6 +150,7 @@
         width: 3rem;
         background-image: linear-gradient(to bottom, #82E7E0, $color-primary-dark);
         box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+        -webkit-animation: grow5 2s forwards;
         animation: grow5 2s forwards;
     }
 }
