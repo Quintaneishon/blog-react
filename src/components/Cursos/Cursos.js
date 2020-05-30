@@ -4,7 +4,6 @@ import './Cursos.scss';
 
 export default function Cursos(props){
     const {data} = props;
-    console.log(data)
     return(
         <div className='cursos'>
             {data.map((dato,i) => <Curso key={i} curso={dato} />)}
@@ -13,8 +12,6 @@ export default function Cursos(props){
 }
 
 function Curso(props){
-    console.log(props.curso);
-
     const { curso:{
         Nombre,
         Link,

@@ -5,7 +5,6 @@ import './Herramientas.scss';
 
 export default function Herramientas(props){
     const {data} = props;
-    console.log(data)
     return(
         <div className='herramientas'>
             {data.map((dato,i) => <Herramienta key={i} herr={dato} />)}
@@ -14,8 +13,6 @@ export default function Herramientas(props){
 }
 
 function Herramienta(props){
-    console.log(props.herr);
-
     const { herr:{
         Nombre,
         Link,

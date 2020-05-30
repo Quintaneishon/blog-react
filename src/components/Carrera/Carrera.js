@@ -55,11 +55,12 @@ export default function Carrera(props){
                       (activo === 'Ranking') ?
                       (<Rankings data={carrera.result[0]} />):
                       (activo === 'Apuntes') ?
-                      (<Apuntes  />):
+                      (<Apuntes data={carrera.result[2]} />):
                       <span>Nada Aun</span>
                     }
                   </div>
                 </div>
+                <a style={{alignSelf:'center',borderBottom:'none'}} className='btn-inline' href="https://icons8.com/" target='_blank'>icons by Icons8</a>
               </div>
             )}
           </>

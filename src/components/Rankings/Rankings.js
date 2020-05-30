@@ -4,7 +4,6 @@ import './Rankings.scss';
 
 export default function Rankings(props){
     const {data} = props;
-    console.log(data);
     return (
         <>
         <div className='rankings'>
