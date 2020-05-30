@@ -1,0 +1,27 @@
+@import '../../variables.scss';
+
+.empty{
+    text-align: center;
+
+    &_error{
+        padding-top: 8rem;
+        font-style: italic;
+        font-size: 10rem;
+        color: black;
+
+        span{
+            color: $color-primary-dark;
+        }
+
+    }
+
+    .empty_emoji{
+        vertical-align: middle;
+    }
+
+    &_logo{
+        margin-top: 2rem;
+        width: 50rem;
+        height: 60rem;
+    }
+}
