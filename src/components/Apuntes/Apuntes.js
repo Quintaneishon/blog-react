@@ -43,6 +43,7 @@ function Item(props){
                     <use xlinkHref='../Icons/sprite.svg#icon-notification'/>
                     </svg>
                     <div className='apuntes__rango'>{apunte.dificultad}/<span>5</span></div>
+                    <span className="tooltip">Dificultad</span>
                 </div>
                 <div className='apuntes__button' >
                     <svg className='apuntes__flecha'>

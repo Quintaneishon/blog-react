@@ -234,3 +234,20 @@ body {
 .parrafo:not(:last-of-type) {
   margin-bottom: 2rem;
 }
+
+.tooltip {
+  visibility: hidden;
+  width: 200%;
+  background-color: $color-gray-dark-3;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: .2rem 0;
+  font-size: 1.3rem;
+  letter-spacing: .05rem;
+  /* Position the tooltip */
+  position: absolute;
+  top: -2rem;
+  left: 2rem;
+  z-index: 1;
+}

@@ -1,73 +1,28 @@
 @import '../../variables.scss';
 
 @keyframes grow1 {
-    0% {
-        flex: 0 0 0rem;
-    }
-
-    50%{
-        flex: 0 0 15rem;
-    }
-
-    100% {
-        flex: 0 0 30rem;
-    }
+    from {flex: 0 0 0rem;}
+    to {flex: 0 0 30rem;}
 }
 
 @keyframes grow2 {
-    0% {
-        flex: 0 0 0rem;
-    }
-
-    50%{
-        flex: 0 0 11.625rem;
-    }
-
-    100% {
-        flex: 0 0 23.25rem;
-    }
+    from {flex: 0 0 0rem;}
+    to {flex: 0 0 23.25rem;}
 }
 
 @keyframes grow3 {
-    0% {
-        flex: 0 0 0rem;
-    }
-
-    50%{
-        flex: 0 0 8.25rem;
-    }
-
-    100% {
-        flex: 0 0 16.5rem;
-    }
+    from {flex: 0 0 0rem;}
+    to {flex: 0 0 16.5rem;}
 }
 
 @keyframes grow4 {
-    0% {
-        flex: 0 0 0rem;
-    }
-
-    50%{
-        flex: 0 0 4.875rem;
-    }
-
-    100% {
-        flex: 0 0 9.75rem;
-    }
+    from {flex: 0 0 0rem;}
+    to {flex: 0 0 9.75rem;}
 }
 
 @keyframes grow5 {
-    0% {
-        flex: 0 0 0rem;
-    }
-
-    50%{
-        flex: 0 0 1.5rem;
-    }
-
-    100% {
-        flex: 0 0 3rem;
-    }
+    from {flex: 0 0 0rem;}
+    to {flex: 0 0 3rem;}
 }
 
 .rankings{

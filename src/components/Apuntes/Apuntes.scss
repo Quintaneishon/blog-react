@@ -33,12 +33,17 @@
         margin-left: 1rem;
         margin-right: auto;
         align-items: center;
+        position: relative;
+        &:hover .tooltip {
+            visibility: visible;
+        }
     }
 
     &__lista{
         //background-color: orangered;
         list-style: none;
         display: none;
+        transition: display 5s;
         &-item{
             padding: 1rem;
             display: flex;
@@ -95,3 +100,4 @@
         fill: $color-gray-dark-3;
     }
 }
+
