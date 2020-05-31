@@ -1,8 +1,10 @@
+@import '../../variables.scss';
+
 .apuntes{
     &__container{
 
     }
-
+    
     &__item{
         background-color: #fff;
         margin: 2rem;
@@ -11,25 +13,85 @@
         box-shadow: 0 2rem 6rem rgba(0,0,0,.06);
     }
 
-    &__icon{
-        width: 1.75rem;
-        height: 1.75rem;
+    &__nombre{
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        font-size: 2rem;
+        font-weight: 500;
+        cursor: pointer;
     }
 
-    &__nombre{
-        border-bottom: 1px solid #f4f2f2;
-        padding: 1rem;
+    &__dificultad,
+    &__button{
+        display: contents;
+    }
 
-        &-activo{
-
-        }
+    &__dificultad{
+        display: flex;
+        margin-left: 1rem;
+        margin-right: auto;
+        align-items: center;
     }
 
     &__lista{
+        //background-color: orangered;
         list-style: none;
-
+        display: none;
         &-item{
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            &:not(:last-child){
+                border-bottom: 1px solid #f4f2f2;
+            }
+
+            &:hover{
+                background-color:$color-gray-light-1;
+            }
+        }
+        &--active{
+            display: block;
+        }
+        &__icon{
+            font-size: inherit;
+            padding: .3rem;
+            background-color: orangered;
+            border-radius: 3px;
+            margin: 0;
+            display: grid;
+            
+        }
+        &__name{
+            text-decoration: none;
 
         }
+
+    }
+
+    &__alert{
+        fill: $color-secondary-dark;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0 .15rem;
+    }
+    &__rango{
+        font-size: 1.8rem;
+        span{
+            font-size: 1.2rem;
+        }
+    }
+    &__flecha{
+        width: 1.85rem;
+        height: 1.85rem;
+        fill: $color-gray-dark-3;
+    }
+
+    &__zoom{
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: $color-gray-dark-3;
     }
 }
