@@ -1,6 +1,7 @@
 
-export const urlApiCarreras = "http://192.168.3.3:3001/";
-export const urlApiCarrera = "http://192.168.3.3:3001/carrera/";
+export const urlApiCarreras = "http://localhost:3001/";
+export const urlApiCarrera = "http://localhost:3001/carrera/";
+export const STORAGE_BAR_ACTIVE = "sidebar";
 export const idsCarreras = {
     SistemasComputacionales: 0,
     Industrial: 1,
