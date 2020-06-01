@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Head from '../Head';
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
-import {urlApiCarrera,idsCarreras} from '../../utils/constants';
+import {urlApiCarrera,idsCarreras,STORAGE_BAR_ACTIVE} from '../../utils/constants';
 import Loading from '../Loading';
 import Empty from '../Empty';
 import SideBar from '../SideBar';
@@ -18,7 +18,7 @@ import '../Home/App.scss';
 export default function Carrera(props){
     const { carreras: { result, loading, error }} = props;
     const { name } = useParams();
-    const [activo,setActivo] = useState('Herramientas');
+    const [activo,setActivo] = useState(localStorage.getItem(STORAGE_BAR_ACTIVE) ? localStorage.getItem(STORAGE_BAR_ACTIVE) : 'Herramientas' );
 
     const id = idsCarreras[name];
     const carrera = useFetch(urlApiCarrera+ (id === undefined ? '-1' : id),null);
