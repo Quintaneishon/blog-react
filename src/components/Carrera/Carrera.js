@@ -10,6 +10,7 @@ import Herramientas from '../Herramientas';
 import Cursos from '../Cursos';
 import Rankings from '../Rankings';
 import Apuntes from '../Apuntes';
+import Popup from '../Popup';
 
 import './Carrera.scss';
 import '../Home/App.scss';
@@ -68,6 +69,11 @@ export default function Carrera(props){
                 <a style={{alignSelf:'center',borderBottom:'none'}} className='btn-inline' href="https://icons8.com/" target='_blank'>Icons by Icons8</a>
               </div>
             )}
+            <Popup tarjet='popup'>
+                <div id='popup__content' style={{height: "75vh"}}>
+                    
+                </div>
+              </Popup>
           </>
         )}
         </div>
