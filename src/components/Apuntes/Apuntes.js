@@ -62,7 +62,7 @@ function Apunte(props){
     const {nombres,imagenes,active} = props;
     let code = [];
     for (let i=0;i<nombres.length;i++){
-        code.push(<li className='apuntes__lista-item' key={i} onClick={() => window.open(`/apuntes/${imagenes[i]}`) } >
+        code.push(<li className='apuntes__lista-item' key={i} onClick={() => popup(imagenes[i]) } >
             <div className='apuntes__lista__name' >{nombres[i]}</div>
             </li>);
     }
@@ -72,4 +72,7 @@ function Apunte(props){
             {code}
         </ul>
     )
+}
+
+function popup(imagen){
 }
