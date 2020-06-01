@@ -61,9 +61,15 @@ function Item(props){
 function Apunte(props){
     const {nombres,imagenes,active} = props;
     let code = [];
+    const click = (imagen) => {
+        window.location.href='#popup';
+        document.getElementById('popup__content').innerHTML =`<embed src="/apuntes/${imagen}" width="100%" height="100%" type="application/pdf" />`;
+    };
+
     for (let i=0;i<nombres.length;i++){
-        code.push(<li className='apuntes__lista-item' key={i} onClick={() => window.open(`/apuntes/${imagenes[i]}`) } >
-            <div className='apuntes__lista__name' >{nombres[i]}</div>
+        code.push(
+            <li className='apuntes__lista-item' key={i} onClick={() => click(imagenes[i])} >
+                <div className='apuntes__lista__name' >{nombres[i]}</div>
             </li>);
     }
 
