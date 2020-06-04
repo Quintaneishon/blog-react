@@ -21,42 +21,42 @@ export default function Carrera(props){
     const [activo,setActivo] = useState(localStorage.getItem(STORAGE_BAR_ACTIVE) ? localStorage.getItem(STORAGE_BAR_ACTIVE) : 'Herramientas' );
 
     const id = idsCarreras[name];
-    const carrera = useFetch(urlApiCarrera+ (id === undefined ? '-1' : id),null);
-    console.log(carrera);
-    let data = [];
+    const res = useFetch(urlApiCarrera+ (id === undefined ? '-1' : id),null);
+    console.log(res);
+    const carrera = res.result;
 
     return(
         <div className='App'>
-            {loading || !result || !carrera.result|| carrera.loading ? (
+            {loading || !result || res.loading ? (
           <Loading />
         ) : (
           <>
             <Head carreras={result[0]}/>
-            {carrera.result[0].length == 0 ? (
+            {carrera == null ? (
               <Empty />
             ):(
               <div className='carrera'>
                 <div className='carrera__header'>
                   <div className='carrera__header-picture'
-                    style={{backgroundImage: `url(${carrera.result[0][0].imagen_carrera})`, opacity: "0.6"}}
+                    style={{backgroundImage: `url(${carrera.imagen})`, opacity: "0.6"}}
                   >
                     &nbsp;
                   </div>
                   <h4 className='carrera__header-title'>
-                  <span className="carrera__header-title--span">{carrera.result[0][0].nombre_carrera}</span>
+                  <span className="carrera__header-title--span">{carrera.nombre}</span>
                   </h4>
                 </div>
                 <div className='carrera__container'>
                   <SideBar activo={activo} setActivo={setActivo} />
                   <div className='carrera__content'>
                     {(activo === 'Herramientas') ? 
-                      (<Herramientas data={carrera.result[1]} />):
+                      (<Herramientas data={carrera.herramientas} />):
                       (activo === 'Cursos') ?
-                      (<Cursos data={carrera.result[3]} />):
+                      (<Cursos data={carrera.cursos} />):
                       (activo === 'Ranking') ?
-                      (<Rankings data={carrera.result[4]} />):
+                      (<Rankings data={carrera.ranking} />):
                       (activo === 'Apuntes') ?
-                      (<Apuntes data={carrera.result[2]} />):
+                      (<Apuntes data={carrera.materias} />):
                       <div className="Error"> 
                         <p>
                           Está en desarrollo, ¡vuelve pronto!
