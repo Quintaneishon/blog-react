@@ -36,6 +36,9 @@ export default function Footer(){
             <div className='text-align footer__footer'>
                 Hecho en México. &copy; 2020 DevCows, Inc. &nbsp;&nbsp;Terms of Service &nbsp;&nbsp;Privacy Policy &nbsp;&nbsp;Legal
             </div>
+            <div>
+                <a style={{alignSelf:'center',borderBottom:'none'}} className='btn-inline' href="https://icons8.com/" target='_blank'>Icons by Icons8</a>
+            </div>
         </footer>
     )
 }

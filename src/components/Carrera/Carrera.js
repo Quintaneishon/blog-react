@@ -54,7 +54,7 @@ export default function Carrera(props){
                       (activo === 'Cursos') ?
                       (<Cursos data={carrera.result[3]} />):
                       (activo === 'Ranking') ?
-                      (<Rankings data={carrera.result[0]} />):
+                      (<Rankings data={carrera.result[4]} />):
                       (activo === 'Apuntes') ?
                       (<Apuntes data={carrera.result[2]} />):
                       <div className="Error"> 

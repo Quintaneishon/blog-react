@@ -55,6 +55,21 @@
 
     &__nombre{
         font-size: 1.4rem;
+        border: none;
+        color: $color-primary;
+        font-size: inherit;
+        border-bottom: 1px solid currentColor;
+        padding-bottom: 2px;
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+        text-decoration: none;
+        transition:.2s;
+      
+        &:hover {
+            color: $color-gray-dark;
+            transform: scale(1.1);
+        }
     }
 }
 

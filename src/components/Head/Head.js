@@ -76,8 +76,8 @@ export default function Head(props){
                     </ul>
                 </li>
             </ul>
-            <input className="searchbar" type="text" ></input>
-            <button className="searchbutton"><svg id="icon"><use xlinkHref="../Icons/sprite.svg#icon-magnifying-glass"></use></svg></button>
+            <input className="searchbar" type="text"></input>
+            <button className="searchbutton" ><svg id="icon"><use xlinkHref="../Icons/sprite.svg#icon-magnifying-glass"></use></svg></button>
         </div>
 
     )
