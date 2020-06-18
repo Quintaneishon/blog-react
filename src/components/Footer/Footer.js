@@ -33,8 +33,8 @@ export default function Footer(){
                     Esta página fue creada para fines didacticos, de aprendizaje y apoyo a la educación. Se usaron diferentes herramientas encontradas en este <a href='http://codingheroes.io/resources/' target='_blank' className='footer__link'>sitio</a> El uso de esta pagina es abierto para todo el que desee copiar el diseño. Favor de dar los respectivos creditos a los desarrolladores aqui mencionados.
                 </div>
             </div>
+                Hecho en México. &copy; 2020 DevCows. &nbsp;&nbsp;Copyright © &nbsp;&nbsp;All rights reserved
             <div className='text-align footer__footer'>
-                Hecho en México. &copy; 2020 DevCows, Inc. &nbsp;&nbsp;Terms of Service &nbsp;&nbsp;Privacy Policy &nbsp;&nbsp;Legal
             </div>
             <div>
                 <a style={{alignSelf:'center',borderBottom:'none'}} className='btn-inline' href="https://icons8.com/" target='_blank'>Icons by Icons8</a>
