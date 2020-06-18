@@ -19,7 +19,7 @@ function Item(props){
     return (
         <div className='apuntes__item'  >
             <div className='apuntes__nombre' onClick={()=> setActive(!active)}>
-                <div className='apuntes__titulo'>{materia.titulo}</div>
+                <div className='apuntes__titulo'>{materia.nombre}</div>
                 <div className='apuntes__dificultad'>
                     <svg className='apuntes__alert'>
                     <use xlinkHref='../Icons/sprite.svg#icon-notification'/>
@@ -37,7 +37,7 @@ function Item(props){
             </div>
             <ul className={'apuntes__lista' + (active ? ' apuntes__lista--active' : '')}>
             {materia.apuntes.map( (apunte,index) =>
-                <Apunte key={index} nombre={apunte.nombre} imagen={apunte.imagen}/>
+                <Apunte key={index} titulo={apunte.titulo} imagen={apunte.imagen}/>
             )}
             </ul>
         </div>
@@ -52,7 +52,7 @@ function Apunte(props){
 
     return(
         <li className='apuntes__lista-item' onClick={() => click(props.imagen) } >
-            <div className='apuntes__lista__name' >{props.nombre}</div>
+            <div className='apuntes__lista__name' >{props.titulo}</div>
         </li>
     )
 }
