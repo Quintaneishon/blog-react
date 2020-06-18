@@ -45,7 +45,7 @@ export default function Head(props){
     });
 
     return(
-        <div className='Head'>
+        <div className="Head">
            	<ul className="nav">
                 <li id="linelogo"><Link to='/'><img src="../Img/Logo.png" id="logo"></img></Link></li>
                 <li><a>Ingenierías</a>
@@ -76,7 +76,7 @@ export default function Head(props){
                     </ul>
                 </li>
             </ul>
-            <input className="searchbar" type="text"></input>
+            <input className="searchbar" type="text" pattern="^[A-Z0-9a-z]+$"></input>
             <button className="searchbutton" ><svg id="icon"><use xlinkHref="../Icons/sprite.svg#icon-magnifying-glass"></use></svg></button>
         </div>
 
