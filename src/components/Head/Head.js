@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState,useEffect } from 'react';
+import useFetch from "../../hooks/useFetch";
+import {urlApiBusqueda} from '../../utils/constants';
 import { Link } from "react-router-dom";
 import './Head.scss';
 
@@ -14,6 +16,20 @@ export default function Head(props){
         return carrera.Id_Tipo == 3
     });
 
+    const [text, setText] = useState('');
+    const [busqueda, setBusqueda] = useState();
+    useEffect(() => {
+        (async () => {
+            try {
+                const res = await fetch(urlApiBusqueda+text);
+                const json = await res.json();
+                setBusqueda(json);
+            } catch (err) {
+                console.log(err);
+            }
+        })();
+    },[text]);
+    
     let listaIngenierias = [];
     ings.forEach(ing => {
         let nameArr = ing.Nombre.split(' ');
@@ -76,7 +92,7 @@ export default function Head(props){
                     </ul>
                 </li>
             </ul>
-            <input className="searchbar" type="text" pattern="^[A-Z0-9a-z]+$"></input>
+            <input className="searchbar" type="text" pattern="^[A-Z0-9a-z]+$" onChange={e => setText(e.target.value)} value={text}></input>
             <button className="searchbutton" ><svg id="icon"><use xlinkHref="../Icons/sprite.svg#icon-magnifying-glass"></use></svg></button>
         </div>
 
