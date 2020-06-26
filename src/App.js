@@ -11,7 +11,7 @@ function App() {
   return (
     <Switch>
       <Route path="/" component={() => <Home carreras={carreras} />} exact />
-      <Route path="/Carreras/:name" component={() => <Carrera carreras={carreras} />} exact />
+      <Route path="/Carreras/:name" component={() => <Carrera carreras={carreras} active={null}/>} exact />
     </Switch>
   );
 }

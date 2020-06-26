@@ -16,12 +16,18 @@ import './Carrera.scss';
 import '../Home/App.scss';
 
 export default function Carrera(props){
-    const { carreras: { result, loading, error }} = props;
+    const { carreras: { result, loading, error }, active} = props;
     const { name } = useParams();
-    const [activo,setActivo] = useState(localStorage.getItem(STORAGE_BAR_ACTIVE) ? localStorage.getItem(STORAGE_BAR_ACTIVE) : 'Herramientas' );
+    const [activo,setActivo] =  useState(
+                                  active 
+                                ? active 
+                                : localStorage.getItem(STORAGE_BAR_ACTIVE) 
+                                ? localStorage.getItem(STORAGE_BAR_ACTIVE) 
+                                : 'Herramientas' 
+                                );
 
     const id = idsCarreras[name];
-    const res = useFetch(urlApiCarrera+ (id === undefined ? '-1' : id),null);
+    const res = useFetch(urlApiCarrera+ (id === undefined ? '-1' : id) + '/null',null);
     console.log(res);
     const carrera = res.result;
 

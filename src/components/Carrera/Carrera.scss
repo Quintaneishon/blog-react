@@ -1,4 +1,5 @@
 @import '../../variables.scss';
+@import '../../responsive.scss';
 
 .titulo{
     width: 100%;
@@ -17,11 +18,23 @@
     &__container{
         display: flex;
         margin: 0 2.3rem;
+
+        @include respond(tab-hor){ 
+            margin: 0; 
+        }
+        @include respond(tab-ver){ 
+            flex-direction: column;
+        }
     }
 
     &__header{
         background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
         margin: 0 2.3rem;
+
+        @include respond(tab-hor){ 
+            margin: 0; 
+        }
+
         position: relative;
         border-bottom: solid;
         border-width: 5px;

@@ -1,0 +1,33 @@
+// MEDIA QUERY MANAGER
+/*
+    0 - 600px;      Telefono  
+    600 - 900px;    Tableta vertical
+    900 - 1200px;   Tableta horizontal
+    1200 - 1800px;  Computadora
+    1800 - ;        Pantalla grande
+*/
+
+/*
+$breakpoint argument choices:
+-celular
+-tab-ver
+-tab-hor
+-big-desktop
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint){
+    @if $breakpoint == celular {
+        @media only screen and (max-width:37.5em){ @content }; //600px
+    }
+    @if $breakpoint == tab-ver {
+        @media only screen and (max-width:56.25em){ @content }; //900px
+    }
+    @if $breakpoint == tab-hor {
+        @media only screen and (max-width:75em){ @content }; //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width:112.5em){ @content }; //1800px
+    }
+}
