@@ -92,8 +92,22 @@ export default function Head(props){
                     </ul>
                 </li>
             </ul>
-            <input className="searchbar" type="text" pattern="^[A-Z0-9a-z]+$" onChange={e => setText(e.target.value)} value={text}></input>
-            <button className="searchbutton" ><svg id="icon"><use xlinkHref="../Icons/sprite.svg#icon-magnifying-glass"></use></svg></button>
+            <div className="search">
+                <input className="searchbar" type="text" pattern="^[A-Z0-9a-z]+$" onChange={e => setText(e.target.value)} value={text}></input>
+                <div className="searchres">
+                    {
+                        busqueda == null 
+                            ? ("") 
+                            : busqueda.lista.map
+                        ((element,index)=>
+                            (
+                                <p key={index}> {element.imagen} {element.nombre}  </p>
+                            )
+                        )    
+                    }
+                </div>
+            </div>
+            <div className="searchicon" ><svg id="icon"><use xlinkHref="../Icons/sprite.svg#icon-magnifying-glass"></use></svg></div>
         </div>
 
     )
